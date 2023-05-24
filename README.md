@@ -1,1 +1,1 @@
-# Responsive-website
+# Responsive website with photo gallery
