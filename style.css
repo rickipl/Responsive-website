@@ -1,3 +1,24 @@
+@media (max-width: 2100px) {
+  .backimage3{
+    padding-left: 50px !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  .backimage1{
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 50px;
+    width: 100% !important;
+  }
+  .backimage2{
+    margin: 0 !important;
+    padding: 0 !important;
+    bottom: 50px;
+    margin-top: 50px;
+  }
+}
+
 @media (max-width: 768px) {
     .navbar,
     .navbar-nav,
@@ -6,17 +27,30 @@
     .breadcrumb,
     .lorem2,
     .lorem,
-    .backimage3 {
+    .backimage3{
       margin: 0 !important;
       padding: 0 !important;
     }
-    .backimage1,
     .backimage2{
-      margin-top: 50px;
+      right: 0px !important;
     }
     .gallery-item{
       width: 200px !important;
       height: 200px !important;
+    }
+    .background-image{
+      left: 0px !important;
+    }
+    .swiper-slide {
+      grid-template-columns: 1fr 1fr 1fr 1fr !important;
+      grid-template-areas:
+      "a2 a2 a2 a2"
+      "a1 a1 a3 a3"
+      "a6 a6 a6 a6"
+      "a4 a4 a5 a5" !important;
+    }
+    .breadcrumb{
+      margin-top: 30px !important;
     }
   }
 
@@ -24,9 +58,20 @@ body{
   overflow-x: hidden;
 }
 
+.navbar-brand{
+  font-size: 35px;
+  font-weight: bold;
+}
+
 .navbar{
   padding-left: 150px;
+  font-size: 25px;
+  text-decoration: none;
   }
+
+.nav-item:hover{
+  text-decoration: underline;
+}
 
 .navbar-nav {
   margin-right: 150px;
@@ -50,6 +95,12 @@ body{
   font-size: 14px;
   text-align: left;
   margin-left: 150px;
+}
+
+.home{
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
 }
 
 .background-image {
@@ -90,11 +141,12 @@ body{
 .backimage3{
   background-position: center;
   object-fit: cover;
+  height: auto;
   width: 100%;
   object-position: right;
   position: relative;
   float: right;
-  margin-top: 200px;
+  margin-top: 50px;
   padding-left: 100px;
 }
 
@@ -124,6 +176,13 @@ body{
   text-align: center;
   font-size: 18px;
   background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+  grid-template-areas:
+    "a1 a1 a2 a2 a2 a2 a3 a3"
+    "a4 a4 a5 a5 a6 a6 a6 a6";
 }
 
 .swiper-container {
@@ -139,4 +198,25 @@ body{
 .swiper-pagination{
   position: relative;
   bottom: -50px;
+}
+
+.a1 { grid-area: a1; }
+.a2 { grid-area: a2; }
+.a3 { grid-area: a3; }
+.a4 { grid-area: a4; }
+.a5 { grid-area: a5; }
+.a6 { grid-area: a6; }
+
+.swiper-slide a {
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.swiper-slide img {
+  min-width: 100%;
+  width: auto!important;
+  object-fit: cover;
+  object-position: center;
+  height: 500px;
 }
